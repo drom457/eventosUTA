@@ -14,5 +14,16 @@ export class HomeComponent implements OnInit {
   }
   btnClick= function () {
     this.router.navigateByUrl('/conferencista');
+    
 }
+
+btnClick2= function () {
+  this.router.navigateByUrl('/galeria');
+  
+}
+
+
+
+
+
 }

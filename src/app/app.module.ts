@@ -16,6 +16,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { ConferencistaComponent } from './conferencista/conferencista.component';
 import { FinPaginaComponent } from './fin-pagina/fin-pagina.component';
+import { AuspicianteComponent } from './auspiciante/auspiciante.component';
+import { GaleriaComponent } from './galeria/galeria.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FinPaginaComponent } from './fin-pagina/fin-pagina.component';
     MenuComponent,
     HomeComponent,
     ConferencistaComponent,
-    FinPaginaComponent
+    FinPaginaComponent,
+    AuspicianteComponent,
+    GaleriaComponent,
   ],
   imports: [
     BrowserModule,

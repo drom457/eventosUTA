@@ -2,22 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { GLOBAL } from './global';
- 
+
 
 
 
 
 @Injectable()
-export class ConferencistaService {
+export class AuspicianteService {
     public url:string;
-    constructor(
-        public _http:HttpClient
-    ){
+    constructor(public _http:HttpClient){
         this.url=GLOBAL.url;
     }
 
     getConferencistas():Observable<any> {
         let headers=new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-        return this._http.get(this.url+'/conferencista',{headers:headers});
+        return this._http.get(this.url+'/auspiciante',{headers:headers});
     }
 }

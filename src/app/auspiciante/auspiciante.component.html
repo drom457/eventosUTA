@@ -1,0 +1,26 @@
+<div class="container espacio">
+    <form #registrerForm="ngForm">
+        <div class="row justify-content-center" *ngFor="let conf of auspiciante">
+            <div class="col-md-10">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action">
+                        <div class="media">
+                           <!-- <img src="{{}}" class="mr-3 rounded-circle" alt="..." width="15%"> -->
+                            <div class="media-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><strong>
+                                                <label>{{conf.nombre}}</label>
+                                                <!--<input name="name1" #name1="ngModel" [(ngModel)]="conferencista.nombre_paterno" type="">
+                                            !-->
+                                        </strong>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </form>
+</div>
