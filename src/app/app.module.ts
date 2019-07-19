@@ -29,7 +29,8 @@ import { FinPaginaComponent } from './fin-pagina/fin-pagina.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    APP_ROUTING
+    APP_ROUTING,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
