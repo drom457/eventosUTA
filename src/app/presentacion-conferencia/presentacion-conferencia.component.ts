@@ -1,6 +1,6 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { PresentacionHibrida } from '../../models/presentacionHibrida';
-import { ActivatedRoute, Router,Params } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PresentacionHibridaService } from '../services/presentacionHibrida.service';
 
 
@@ -19,8 +19,9 @@ export class PresentacionConferenciaComponent implements OnInit {
   ) { }
   private expositor:any;
   ngOnInit() {
-    this.expositor=this._presentacionService.getExpositor(this._route.snapshot.params.id);
-    console.log(this.expositor); 
+    //this.expositor=this._presentacionService.getExpositor(this._route.snapshot.params.id);
+    //console.log(this.expositor); 
+    this._presentacionService.saludar();
   }
 
 }
