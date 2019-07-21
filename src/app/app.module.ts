@@ -18,6 +18,7 @@ import { ConferencistaComponent } from './conferencista/conferencista.component'
 import { FinPaginaComponent } from './fin-pagina/fin-pagina.component';
 import { AuspicianteComponent } from './auspiciante/auspiciante.component';
 import { GaleriaComponent } from './galeria/galeria.component';
+import { PresentacionConferenciaComponent } from './presentacion-conferencia/presentacion-conferencia.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { GaleriaComponent } from './galeria/galeria.component';
     FinPaginaComponent,
     AuspicianteComponent,
     GaleriaComponent,
+    PresentacionConferenciaComponent,
   ],
   imports: [
     BrowserModule,

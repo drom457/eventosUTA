@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ConferencistaComponent } from './conferencista/conferencista.component';
 import { GaleriaComponent } from './galeria/galeria.component';
 import { AuspicianteComponent } from './auspiciante/auspiciante.component';
+import { PresentacionConferenciaComponent } from './presentacion-conferencia/presentacion-conferencia.component';
 
 
 
@@ -12,6 +13,7 @@ const APP_ROUTES: Routes = [
     { path: 'conferencista', component: ConferencistaComponent },
     { path: 'galeria', component: GaleriaComponent },
     { path: 'auspiciante', component: AuspicianteComponent },
+    { path: 'presentacionConferencia/:id', component: PresentacionConferenciaComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'index'},
 ];
 
