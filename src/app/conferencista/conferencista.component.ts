@@ -24,14 +24,14 @@ export class ConferencistaComponent implements OnInit {
     this._conferencistaService.getConferencistas().subscribe(
       response => {
         this.conferencistas = response;
-      }
-     
+      }    
     );
+    
   }
   private encriptacion:any;
   btnClick(documento_identificacion:string){
     const md5 = new Md5();
     this.encriptacion=md5.appendStr(documento_identificacion).end();
-    this._router.navigate(['/presentacionConferencia', this.encriptacion]); 
+    this._router.navigate(['/presentacionConferencia'],{queryParams:{documento_identificacion:this.encriptacion},skipLocationChange: true}); 
   }
 }

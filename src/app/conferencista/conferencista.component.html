@@ -11,23 +11,34 @@
         </div>
         <div class="col-md-12" *ngIf="conferencistas">
             <div class="row justify-content-center" *ngFor="let conf of conferencistas">
-                <div class="col-md-10">
+                <div class="col-sm-12 col-md-8">
                     <div class="list-group">
                         <a class="list-group-item list-group-item-action" (click)="btnClick(conf.documento_identificacion);">
                             <div class="media">
-                                <img src="{{conf.foto}}" class="mr-3 rounded-circle" alt="..." width="15%">
-                                <div class="media-body">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1"><strong>
-                                                        <label>{{conf.nombre_paterno + ' ' + conf.apellido_paterno}}</label>
-                                                        <!--<input name="name1" #name1="ngModel" [(ngModel)]="conferencista.nombre_paterno" type="">
-                                                    !-->
-                                                </strong>
-                                        </h5>
-                                        <small>{{conf.pais}}</small>
-                                    </div>
-                                    <p class="mb-1 text-justify">{{conf.descripcion}}</p>
-                                </div>
+                                <table width="100% ">
+                                    <tr>
+                                        <td style="width: 25%">
+                                            <img src="{{conf.foto}}" class="mr-3 rounded-circle" alt="..." width="65%">
+                                        </td>
+                                        <td>
+                                            <div class="media-body">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1"><strong>
+                                                                                    <label>{{conf.nom_paterno + ' ' + conf.ape_paterno}}</label>
+                                                                                    <!--<input name="name1" #name1="ngModel" [(ngModel)]="conferencista.nombre_paterno" type="">
+                                                                                        !-->
+                                                                                </strong>
+                                                    </h5>
+                                                    <small>{{conf.pais}}</small>
+                                                </div>
+                                                <p class="mb-1 text-justify">{{conf.resumen}}</p>
+                                            </div>
+                                        </td>
+                                        <td style="width: 10%;padding-left: 20px">
+                                            <img src="/assets/img/flecha-derecha.png" class="mr-3 rounded-circle" alt="..." width="50%">
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </a>
                     </div>

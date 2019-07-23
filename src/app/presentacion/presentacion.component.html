@@ -1,0 +1,78 @@
+<div class="container">
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="margin:0;">
+                <li class="breadcrumb-item"><a [routerLink]="['/index']" routerLinkActive="router-link-active">Inicio</a>
+                </li>
+                <li class="breadcrumb-item"><a [routerLink]="['/conferencista']" routerLinkActive="router-link-active">Conferencistas</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Presentaciones</li>
+            </ol>
+        </nav>
+    </div>
+    <div *ngFor="let item of expositor" class="text-center">
+        <div style="background-color: darkblue;color: white;padding-bottom: 20px">
+            <h5> {{item.Expositor}}</h5>
+            <img src="{{item.foto}}" class="mr-3 rounded-circle" alt="..." width="15%">
+            <br>
+            <br>
+            <h5>{{item.resumen}}</h5>
+        </div>
+        <div style="padding-top: 20px">
+
+            <h5>{{item.descripcion}}</h5>
+        </div>
+    </div>
+    <br>
+    <form #registrerForm="ngForm">
+
+        <div class="alert alert-danger col-md-10 col-sm-12 container text-center" role="alert" *ngIf="cantidad!=200">
+            <p class="mb-0">No existe presentaciones</p>
+        </div>
+
+        <div *ngIf="cantidad==200">
+            <div class="spinner-border text-secondary spinner-border-lg center" style="width: 5rem; height: 5rem;" role="status" *ngIf="!presentaciones">
+                <span class="sr-only">Cargando...</span>
+            </div>
+
+            <div class="col-md-12" *ngIf="presentaciones">
+                <div class="col-md-8 col-sm-12 justify-content-center">
+                    <h5>Agenda</h5>
+                </div>
+                <div class="row justify-content-center" *ngFor="let presentacion of presentaciones">
+                    <div class="col-md-10 col-sm-12">
+
+                        <div class="list-group">
+                            <a class="list-group-item list-group-item-action" style="padding: 0;margin: 0" (click)="btnClick(presentacion);" skipLocationChange=true>
+                                <div class=" media ">
+                                    <table width="100% ">
+                                        <tr>
+                                            <td class="table-secondary text-center " style="width: 15%">
+                                                <h5>
+                                                    <strong>
+                                                    {{ presentacion.f_h_inicio | date:'dd' }}<br />{{ presentacion.f_h_inicio | date:'MMM'|uppercase }}
+                                                </strong>
+                                                </h5>
+                                            </td>
+
+                                            <td style="padding-left: 20px;padding-right: 20px">
+                                                <h5 class="mb-1 text-justify" style="color: black"><strong>{{ presentacion.titulo }} </strong></h5>
+                                                <div class="d-flex w-100 justify-content-between ">
+                                                    <small class="mb-1 " style="color: darkblue">{{(presentacion.f_h_inicio | date:'HH:mm')  + ' - ' + (presentacion.f_h_fin | date:'HH:mm') }}</small>
+                                                    <small style="color: gray">{{presentacion.ubicacion}}</small>
+                                                </div>
+                                            </td>
+                                            <td style="width: 10%">
+                                                <img src="/assets/img/flecha-derecha.png" class="mr-3 rounded-circle" alt="..." width="50%">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

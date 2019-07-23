@@ -1,5 +1,6 @@
-export class PresentacionHibrida{
+export class Conferencia{
     constructor(
+        public documento_identificacion:string,
         public f_h_inicio:Date,
         public f_h_fin:Date,
         public titulo:string,
@@ -7,7 +8,8 @@ export class PresentacionHibrida{
         public nombre:string,
         public ubicacion:string,        
         public coord_x:number,
-        public coord_y:number
+        public coord_y:number,
+        public expositor:string
     ) {
         
     }

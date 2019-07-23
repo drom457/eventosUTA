@@ -1,10 +1,10 @@
 export class Conferencista{
     constructor(
         public documento_identificacion:string,
-        public nombre_paterno:string,
-        public apellido_paterno:string,
-        public email:string,
-        public descripcion:string,
+        public nom_paterno:string,
+        public ape_paterno:string,
+        public pais:string,
+        public resumen:string,
         public foto:string
     ) {
         

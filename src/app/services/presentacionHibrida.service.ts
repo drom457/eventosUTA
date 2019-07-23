@@ -15,8 +15,15 @@ export class PresentacionHibridaService {
     ) {
         this.url = GLOBAL.url;
     }
-    saludar(){
-        console.log('Hola');
+    getPresentacion(documento_identificacion:string):Observable<any> {
+        let headers=new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+        return this._http.get(this.url+'/presentacionHibrida/'+documento_identificacion+'/conferencia',{headers:headers});
     }
+
+    getExpositor(documento_identificacion:string):Observable<any>{
+        let headers=new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+        return this._http.get(this.url+'/obtenerConferencista/'+documento_identificacion,{headers:headers});
+    }
+
 
 }
