@@ -1,29 +1,40 @@
-<div class="container-fluid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Galeria</title>
+  <style type="text/css">
+    .auto-style1 {
+        width: 1725px;
+    }
+    .auto-style2 {
+        width: 1407px;
+        margin-right: 0px;
+    }
+</style>
 
-    <div class="card center" style="text-align: center">
-        <button type="button" class="btn btn-primary-outline pull-right card-img-top ">
-            <img id="imagen1" src="assets/img/campana.png" class="img-fluid img-thumbnail" alt="Responsive image"
-                width="50%">
-            <div class="card-body">
-                <h5 class="card-title">imagen1</h5>
-            </div>
-        </button>
-    </div>
-    <div class="card center" style="text-align: center">
-        <button type="button" class="btn btn-primary-outline pull-right card-img-top ">
-            <img src="assets/img/facultad.png" class="img-fluid img-thumbnail" alt="Responsive image" width="50%">
-            <div class="card-body">
-                <h5 class="card-title">imagen2</h5>
-            </div>
-        </button>
-    </div>
-    <div class="card center" style="text-align: center">
-        <button type="button" class="btn btn-primary-outline pull-right card-img-top ">
-            <img src="assets/img/servicio-al-cliente.png" class="img-fluid img-thumbnail" alt="Responsive image"
-                width="50%">
-            <div class="card-body">
-                <h5 class="card-title">imagen3</h5>
-            </div>
-        </button>
-    </div>
+</head>
+<body>
+<div ng-container="micontrolador" style="overflow:scroll;height:700px;width:100%">
+    <h1 style="text-align: center">Galeria</h1>
+    <ul>
+      <li *ngFor="let imagen of imagenes">
+          <div class="container-fluid">
+              <div class="card center" style="text-align: center; width: 100%" >
+                  <button type="button" class="btn btn-primary-outline pull-right card-img-top ">
+                      <img id="imagen1" src="assets/img/{{imagen}}"  class="img-fluid img-thumbnail" alt="Responsive image"
+                          width="100%">
+                      <div class="card-body">
+                          <h5 class="card-title">{{imagen}}</h5>
+                      </div>
+                  </button>
+              </div>
+              </div>
+      </li>
+    </ul>
+
 </div>
+</body>
+</html>
