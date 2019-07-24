@@ -5,17 +5,19 @@ import { ConferencistaComponent } from './conferencista/conferencista.component'
 import { GaleriaComponent } from './galeria/galeria.component';
 import { PresentacionComponent } from './presentacion/presentacion.component';
 import { ConferenciaComponent } from './conferencia/conferencia.component';
-import { PresentacionHibrida } from '../models/presentacionHibrida';
+import { InformacionComponent } from './informacion/informacion.component';
 
 
 
 const APP_ROUTES: Routes = [
-    { path: '../index', component: HomeComponent },
+    { path: 'index', component: HomeComponent },
     { path: 'conferencista', component: ConferencistaComponent },
     { path: 'galeria', component: GaleriaComponent },
     { path: 'presentacionConferencia', component: PresentacionComponent },
     { path: 'conferencia', component: ConferenciaComponent},
-    { path: '**', pathMatch: 'full', redirectTo: '../index'},
+    { path: 'informacion', component: InformacionComponent},
+    { path: '**', pathMatch: 'full', redirectTo: 'index'}
+    
 ];
 
 @NgModule({

@@ -1,0 +1,29 @@
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/index']" routerLinkActive="router-link-active">Inicio</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Informacion</li>
+        </ol>
+    </nav>
+</div>
+
+<h1 style="text-align:center">{{ title }}</h1>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<div style="text-align: center">
+<h2> <b>TELEFONO</b> (03)-3700090 ext. 83518</h2>
+
+<h3><b>CORREO ELECTRONICO:</b> csei@uta.edu.ec</h3>
+
+<h3><b>WEB:</b>https://csei.uta.edu.ec</h3>
+
+<a href="../../assets/archivos/archico1.pdf" download="Congreso">
+    Descargar Archivo
+    </a>
+
+</div>

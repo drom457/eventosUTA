@@ -18,6 +18,17 @@
 </head>
 <body>
 <div ng-container="micontrolador" style="overflow:scroll;height:700px;width:100%">
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="['/index']" routerLinkActive="router-link-active">Inicio</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Galeria</li>
+            </ol>
+        </nav>
+    </div>
+
+
     <h1 style="text-align: center">Galeria</h1>
     <ul>
       <li *ngFor="let imagen of imagenes">
