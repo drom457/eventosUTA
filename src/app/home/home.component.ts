@@ -24,6 +24,10 @@ btnClick1= function () {
   this.router.navigateByUrl('/auspiciante');
   
 }
+btnClick4= function () {
+  this.router.navigateByUrl('/informacion');
+  
+}
 
 
 

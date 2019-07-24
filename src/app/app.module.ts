@@ -23,6 +23,7 @@ import { AuspicianteComponent } from './auspiciante/auspiciante.component';
 import { GaleriaComponent } from './galeria/galeria.component';
 import { PresentacionComponent } from './presentacion/presentacion.component';
 import { ConferenciaComponent } from './conferencia/conferencia.component';
+import { InformacionComponent } from './informacion/informacion.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,8 @@ import { ConferenciaComponent } from './conferencia/conferencia.component';
     GaleriaComponent,
     PresentacionComponent,
     ConferenciaComponent,
+    InformacionComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import { ConferenciaComponent } from './conferencia/conferencia.component';
     HttpClientModule,
     APP_ROUTING,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBZL3yylo0j6hmTjzutISzv5JTtnaYexRE'
+      apiKey: 'AIzaSyB6syAP6SuTVqiM96728suvOit824GgzGM'
     }),
   ],
   providers: [{provide: LOCALE_ID, useValue: 'es-EC'}],
