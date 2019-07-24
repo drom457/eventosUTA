@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class InformacionComponent implements OnInit {
-  title: string = 'Ubicacion del Congreso';
+  title: string = 'Ubicación del Congreso';
   
   lat: number = -1.268775;
   lng: number = -78.624101;
