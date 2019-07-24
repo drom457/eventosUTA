@@ -19,7 +19,6 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { ConferencistaComponent } from './conferencista/conferencista.component';
 import { FinPaginaComponent } from './fin-pagina/fin-pagina.component';
-import { AuspicianteComponent } from './auspiciante/auspiciante.component';
 import { GaleriaComponent } from './galeria/galeria.component';
 import { PresentacionComponent } from './presentacion/presentacion.component';
 import { ConferenciaComponent } from './conferencia/conferencia.component';
@@ -31,7 +30,6 @@ import { ConferenciaComponent } from './conferencia/conferencia.component';
     HomeComponent,
     ConferencistaComponent,
     FinPaginaComponent,
-    AuspicianteComponent,
     GaleriaComponent,
     PresentacionComponent,
     ConferenciaComponent,

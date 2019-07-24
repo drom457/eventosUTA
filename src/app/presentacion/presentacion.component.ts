@@ -48,7 +48,7 @@ export class PresentacionComponent implements OnInit {
   conferencia:Conferencia;
   btnClick(presentacion:PresentacionHibrida) {
     this.conferencia=new Conferencia(this.idCed,presentacion.f_h_inicio,presentacion.f_h_fin,presentacion.titulo,presentacion.descripcion,presentacion.nombre, presentacion.ubicacion,presentacion.coord_x,presentacion.coord_y,this.expositor[0].Expositor);
-    this._router.navigate(['/conferencia'],{queryParams:this.conferencia,skipLocationChange: true}); 
+    this._router.navigate(['conferencia'],{queryParams:this.conferencia,skipLocationChange: true}); 
   }
 
 }
