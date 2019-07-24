@@ -13,19 +13,19 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   btnClick= function () {
-    this.router.navigateByUrl('/conferencista'); 
+    this.router.navigateByUrl('conferencista'); 
 }
 
 btnClick2= function () {
-  this.router.navigateByUrl('/galeria');
+  this.router.navigateByUrl('galeria');
   
 }
 btnClick1= function () {
-  this.router.navigateByUrl('/auspiciante');
+  this.router.navigateByUrl('auspiciante');
   
 }
 btnClick4= function () {
-  this.router.navigateByUrl('/informacion');
+  this.router.navigateByUrl('informacion');
   
 }
 
