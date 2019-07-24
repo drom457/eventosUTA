@@ -25,7 +25,7 @@ btnClick1= function () {
   
 }
 btnClick4= function () {
-  this.router.navigateByUrl('/informacion');
+  this.router.navigateByUrl('informacion');
   
 }
 
